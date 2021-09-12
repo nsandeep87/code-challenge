@@ -2,6 +2,11 @@
 
 Description:
 The challenge is wrapped into a NodeJs Project. You'll need node js runtime. i have use Node 12.14.0.
+The program consistis of the the below files
+1. airline.js: this is entry file, through which you can run the program. The airline.js creates an instance of airplane passing the given input
+2. airplane.js: The file creates an airplane and draws seat section based on the inputs
+3. seatSection.js: Creates seat sections to based on the input if it the Left section, right section or Middle. Based on the section, we can determine if the seat is Window, Middle, Aisle
+4. seat.js: The file creates seats and and has the fields updated based on which section it is present
 
 How to run the program:
 Once Node is installed, run node airplaine.js

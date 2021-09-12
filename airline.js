@@ -15,12 +15,12 @@ if(airplaneSeats && airplaneSeats.seatSections){
     airplaneSeats.seatSections.forEach((seatSections)=>{
         var output =[[]]
         seatSections.seatCollection.forEach(element => {
-       // console.log(element.passengerId)
+      
         if(!output[element.row]){
             output[element.row] =[]
         }
             output[element.row][element.column] = element.passengerId
-      // console.log(output)
+      
     });
     finalOutput.push(output)
     })
@@ -44,28 +44,22 @@ function FillSeats(input,userCount) {
            
             if(counter>=userCount)
             {
-              //  console.log("m"+counter)
+             
                 return;
             }
             else{
-              //  console.log(element)
+             
                 element.isOccupied = true;
                 element.passengerId = ++counter;
                 return element
             }
             
         }
-        //console.log(aisleArray)
+        
         aisleArray.map(processSeatArray);
         windowArray.map(processSeatArray);
         middleSeatArray.map(processSeatArray);
         return ar;
-        //for(let i =0;i<ar.seatSections.length;i++){
-           //console.log(ar.seatSections[i].seatCollection)
-        //    ar.seatSections[1].seatCollection.forEach((element)=>{
-        //        console.log(element.passengerId || 'A')
-        //    })
-        //}
     }
     catch(e){
        // console.log("error")
